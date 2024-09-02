@@ -5,6 +5,7 @@ import Image from "next/image";
 import LeftIcon from "@/public/assets/icons/left.svg";
 import RightIcon from "@/public/assets/icons/right.svg";
 import FloatingPlusBtn from "../buttons/FloatingPlusBtn";
+import { BLUR_DATA_URL } from "@/src/constants";
 
 export default function CameraSection() {
   const iguanaRef = useRef<HTMLDivElement>(null);
@@ -112,21 +113,21 @@ const RenderDescription = () => {
 
 const CAROUSEL_IMAGES = [
   {
-    src: "/assets/images/carousel_1.jpg",
+    src: "/assets/images/carousel_1.webp",
     size: "0.5x",
     type: "울트라 와이드 | 접사",
   },
   {
-    src: "/assets/images/carousel_2.jpg",
+    src: "/assets/images/carousel_2.webp",
     size: "0.5x",
     type: "울트라 와이드 | 13mm",
   },
-  { src: "/assets/images/carousel_3.jpg", size: "1x", type: "메인 | 24mm" },
-  { src: "/assets/images/carousel_4.jpg", size: "1x", type: "메인 | 28mm" },
-  { src: "/assets/images/carousel_5.jpg", size: "1x", type: "메인 | 35mm" },
-  { src: "/assets/images/carousel_7.jpg", size: "2x", type: "망원 | 48mm" },
+  { src: "/assets/images/carousel_3.webp", size: "1x", type: "메인 | 24mm" },
+  { src: "/assets/images/carousel_4.webp", size: "1x", type: "메인 | 28mm" },
+  { src: "/assets/images/carousel_5.webp", size: "1x", type: "메인 | 35mm" },
+  { src: "/assets/images/carousel_7.webp", size: "2x", type: "망원 | 48mm" },
   {
-    src: "/assets/images/carousel_7.jpg",
+    src: "/assets/images/carousel_7.webp",
     size: "새로운 5x",
     type: "망원 | 120mm",
   },
@@ -190,6 +191,7 @@ const RenderSwiper = () => {
                       fill
                       objectFit="cover"
                       alt="image"
+                      blurDataURL={BLUR_DATA_URL}
                     />
                   </motion.div>
                 ))}
