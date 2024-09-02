@@ -191,6 +191,7 @@ const RenderSwiper = () => {
                       fill
                       objectFit="cover"
                       alt="image"
+                      placeholder="blur"
                       blurDataURL={BLUR_DATA_URL}
                     />
                   </motion.div>
